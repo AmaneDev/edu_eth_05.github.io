@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+:root{
+    --VerydarkBluemainBG: hsl(217, 54%, 11%);
+    --VerydarkBluecardBG: hsl(216, 50%, 16%);
+    --VerydarkBlueline: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+    --Softblue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --Outfit_font: "Outfit", arial;
+    --Black_shadow: rgba(0, 0, 0, 0.2);
+}
+body{
+    background-color: var(--VerydarkBluemainBG);
+    display: flex;
+    justify-content: center;
+    max-width: 1440px;
+    min-height: 100vh;
+    margin: 0 auto;
+}
+main{
+    box-shadow: 1px 1px 100px var(--Black_shadow);
+    background-color: var(--VerydarkBluecardBG);
+    border-radius: 15px; 
+    padding: 15px;
+    max-width: 320px;
+}
+.nadpis{
+    color: var(--White);
+    font-size: 1.2em;
+    font-weight: 600;
+    font-family: var(--Outfit_font);
+}
+.nadpis:hover{
+    color: var(--Cyan);
+    cursor: pointer;
+}
+.textik{
+    color: var(--Softblue);
+    font-weight: 400;
+    opacity: 80%;
+    font-family: var(--Outfit_font);
+}
+.kostka{
+    max-width: 320px;
+    width: 100%;
+    border-radius: 15px;
+    
+}
+.img_container{
+    max-width: 400px;
+    position: relative;
+    cursor: pointer;
+}
+.img_container img:first-child{
+    width: 100%;
+    display: block;
+}
+.img_container img:last-child{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);  /*posunutí pivit pointu*/
+    display: none;
+}
+.kostka_overlay{
+    position: absolute;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background-color: aqua;
+    border-radius: 15px;
+    opacity: 0;
+    transition: 0.4s ease-in;
+}
+.img_container:hover img:last-child{
+    display: block;
+}
+.img_container:hover .kostka_overlay{
+    opacity: 0.5;
+}
+.etherium_div{
+    display: flex;
+    justify-content: space-between;
+}
+.eth_text{
+    color: var(--Cyan);
+    font-family: var(--Outfit_font);
+}
+.time{
+    color: var(--Softblue); 
+    font-family: var(--Outfit_font);
+    font-weight: 500;
+}
+.align_items_center{
+    align-items: center;
+}
+.eth_section{
+    display: flex;
+    gap: 8px;
+    font-weight: 500;
+}
+.time_section{
+    display: flex;
+    gap: 8px;
+}
+.autor_div{
+    display: flex;
+    gap: 4px;
+    justify-content: left;
+    object-fit: contain;
+    font-family: var(--Outfit_font);
+}
+.avatar{
+    width:10%; 
+    padding: 10px;
+}
+.autor_name_darkblue{
+    color: var(--Softblue);
+}
+.autor_name_white{
+    color: var(--White);
+}
+.autor_name_white:hover{
+    color: var(--Cyan);
+    cursor: pointer;
+}
+hr{
+    opacity: 15%;
+    color: var(--VerydarkBlueline);
+}
